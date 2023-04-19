@@ -1,0 +1,14 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+
+go_library(
+    name = "serviceb_lib",
+    srcs = ["main.go"],
+    importpath = "github.com/mohammadVatandoost/go-bazel-monorepo/services/serviceb",
+    visibility = ["//visibility:private"],
+)
+
+go_binary(
+    name = "serviceb",
+    embed = [":serviceb_lib"],
+    visibility = ["//visibility:public"],
+)
