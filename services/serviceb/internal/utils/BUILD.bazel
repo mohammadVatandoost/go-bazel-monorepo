@@ -1,0 +1,14 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
+
+go_library(
+    name = "utils",
+    srcs = ["utils.go"],
+    importpath = "github.com/mohammadVatandoost/go-bazel-monorepo/services/serviceb/internal/utils",
+    visibility = ["//services/serviceb:__subpackages__"],
+)
+
+go_test(
+    name = "utils_test",
+    srcs = ["utils_test.go"],
+    embed = [":utils"],
+)

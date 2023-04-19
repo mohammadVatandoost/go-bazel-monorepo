@@ -5,6 +5,7 @@ go_library(
     srcs = ["main.go"],
     importpath = "github.com/mohammadVatandoost/go-bazel-monorepo/services/serviceb",
     visibility = ["//visibility:private"],
+    deps = ["//services/serviceb/internal/utils"],
 )
 
 go_binary(
